@@ -1,0 +1,29 @@
+body{
+    background-color: lightblue;
+    color: maroon;
+    font-family: Arial;
+    margin: 0px;
+}
+header{
+    background-color: black;
+    color: greenyellow;
+    font-family: Arial;
+    padding: 10px;
+    font-size: 24pt;
+}
+main{
+    background-color: yellowgreen;
+    color: darkblue;
+    font-family: Arial;
+    padding: 5px;
+}
+footer{
+    background-color: black;
+    color: greenyellow;
+    font-family: Arial;
+    padding: 10px;
+    font-size: 10pt;
+}
+a{
+    text-decoration: none;
+}
