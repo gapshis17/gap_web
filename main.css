@@ -27,3 +27,25 @@ footer{
 a{
     text-decoration: none;
 }
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: azure;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color:black;
+    opacity: 0.3;
+}
+
+
