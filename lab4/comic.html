@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+    <style>
+         div {
+            position: relative;
+            width: 400px;
+            height: 160px;
+            line-height: 70px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 130px;
+            background-color: white;
+            border: 1px dotted darkgreen;
+            z-index: 4;
+            top: -1050px;
+            left: 1000px;
+            box-shadow: 30px black;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        img:hover + .one, .one:hover ~ .two, .two:hover ~ .three, .three:hover ~ .text {
+            opacity: 1;
+        }
+
+        .one {
+            position: relative;
+            width: 100px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px dotted darkgreen;
+            z-index: 1;
+            top: -500px;
+            left: 750px;
+        }
+        .two {
+            position: relative;
+            width: 140px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px dotted darkgreen;
+            z-index: 2;
+            top: -610px;
+            left: 820px;
+        }
+        .three {
+            position: relative;
+            width: 200px;
+            height: 130px;
+            border-radius: 50%;
+            background-color: white;
+            border: 1px dotted darkgreen;
+            z-index: 3;
+            top: -770px;
+            left: 900px;
+        }
+        .text {
+            padding-top: 100px;
+        }
+
+
+    </style>
+    <main>
+        <img src="https://i.ytimg.com/vi/asxkFVjk5Yo/maxresdefault.jpg" alt="">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="text">52</div>
+    </main>
+</body>
+</html>
