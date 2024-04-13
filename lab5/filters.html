@@ -44,6 +44,12 @@
             document.getElementById('blurImage').style.filter = 'invert(' + invertValue + '%)';
         }
 
+        function saturateChange() {
+            let saturateValue = document.getElementById('saturateValue').value;
+            document.getElementById('saturateOutput').innerText = saturateValue + '%';
+            document.getElementById('blurImage').style.filter = 'saturate(' + saturateValue + '%)';
+        }
+
         
 
 
@@ -94,6 +100,13 @@
             <input type="range" min="0" max="100" value="0" onchange="invertChange()" id="invertValue">
             <span id="invertOutput"></span>
         </div>
+
+        <div>
+            Фильтр saturate:
+            <input type="range" min="0" max="500" value="100" onchange="saturateChange()" id="saturateValue">
+            <span id="saturateOutput"></span>
+        </div>
+        
         
 
 
