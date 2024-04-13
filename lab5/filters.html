@@ -50,10 +50,11 @@
             document.getElementById('blurImage').style.filter = 'saturate(' + saturateValue + '%)';
         }
 
-        
-
-
-
+        function sepiaChange() {
+            let sepiaValue = document.getElementById('sepiaValue').value;
+            document.getElementById('sepiaOutput').innerText = sepiaValue + '%';
+            document.getElementById('blurImage').style.filter = 'sepia(' + sepiaValue + '%)';
+        }
     </script>
 </head>
 <body>
@@ -107,9 +108,12 @@
             <span id="saturateOutput"></span>
         </div>
         
+        <div>
+            Фильтр sepia:
+            <input type="range" min="0" max="100" value="0" onchange="sepiaChange()" id="sepiaValue">
+            <span id="sepiaOutput"></span>
+        </div>
         
-
-
         <div><img src="https://i.ytimg.com/vi/dNzAOSXUHtI/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&amp;rs=AOn4CLA9kIAHB-k5Ae9-bwjS3IjOzUG9qg" id="blurImage"></div>
 
 
