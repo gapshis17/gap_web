@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гапшис Альбинас Альбинович. Лабораторная 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <script>
+        function showSum() {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert ('Сумма ' + a + ' и ' + b + ' равна ' + result);
+        }
+    </script>
+    <style>
+        .message {
+            width: 230px;
+            height: 20px;
+            margin: 25px;
+            padding: 10px;
+            border: 5px solid green;
+            border-radius: 10px;
+            display: inline-block;
+            background-color: pink;
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header onclick="showAuthor()">
+        НГТУ, ФБ, Лабораторная работа 5
+    </header>
+    <main>
+        <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
+        <div class="message">Узнать, кто автор страницы</div>
+    </main>
+
+    <footer>
+        &copy; Альбинас Гапшис, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
