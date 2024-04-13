@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гапшис Альбинас Альбинович. Лабораторная 5</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <script>
+        function showSum() {
+            let inputA = document.getElementById('numberA')
+            let inputB = document.getElementById('numberB')
+            let inputC = document.getElementById('numberC')
+            let inputD = document.getElementById('numberD')
+            let inputE = document.getElementById('numberE')
+
+            let a1 = parseInt(inputA.value);
+            let a2 = 100
+            let a = a1 * a2
+
+            let b1 = parseInt(inputB.value);
+            let b2 = 80
+            let b = b1 * b2
+
+            let c1 = parseInt(inputC.value);
+            let c2 = 150
+            let c = c1 * c2
+
+            let d1 = parseInt(inputD.value);
+            let d2 = 300
+            let d = d1 * d2
+
+            let e1 = parseInt(inputE.value);
+            let e2 = 110
+            let e = e1 * e2
+
+            let result = a + b + c + d + e;
+            alert ('Сумма товаров в вашей корзине равна ' + result);
+        }
+
+        function clearFields() {
+            document.getElementById('numberA').value = '';
+            document.getElementById('numberB').value = '';
+            document.getElementById('numberC').value = '';
+            document.getElementById('numberD').value = '';
+            document.getElementById('numberE').value = '';
+        }
+  
+
+    </script>
+</head>
+<body>
+    <header onclick="showAuthor()">
+        Корзина товаров
+    </header>
+
+    <style>
+        .card {
+            width: 230px;
+            height: 320px ;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: azure;
+            margin-top: 20px;
+        }
+    </style>
+    <main>
+        <div class="card">
+            <h1 style="font-size: 25px; text-align: center;">Корзина товаров</h1>
+            <label>Яблоки (100 руб/шт): <input type="number" placeholder="Введите количество яблок" id="numberA" min="0" style="width: 220px; margin-bottom: 10px;"></label><br>
+            <label>Груши (80 руб/шт): <input type="number" placeholder="Введите количество груш" id="numberB" style="width: 220px; margin-bottom: 10px;"></label><br>
+            <label>Апельсины (150 руб/шт): <input type="number" placeholder="Введите количество апельсинов" id="numberC" style="width: 220px; margin-bottom: 10px;"></label><br>
+            <label>Дыни (300 руб/шт): <input type="number" placeholder="Введите количество дынь" id="numberD" style="width: 220px; margin-bottom: 10px;"></label><br>
+            <label>Бананы (110 руб/шт): <input type="number" placeholder="Введите количество бананов" id="numberE" style="width: 220px; margin-bottom: 10px;"></label><br>
+            <input type="button" value="Рассчитать" onclick="showSum()">
+            <input type="button" value="Очистить" onclick="clearFields()">
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; Альбинас Гапшис, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
