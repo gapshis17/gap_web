@@ -13,6 +13,16 @@
             let result = a + b;
             alert ('Сумма ' + a + ' и ' + b + ' равна ' + result);
         }
+
+        function showAuthor() {
+            let author = 'Автор страницы: \nГапшис Альибнас Альбинович';
+            alert (author);
+        }
+
+        function showMsg() {
+            let msg = 'Приветствую вас на мой странице!';
+            alert (msg);
+        }
     </script>
     <style>
         .message {
@@ -27,18 +37,25 @@
             color: red;
             cursor: pointer;
         }
+        .header {
+            cursor: pointer;
+        }
+
+        .footer {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
-    <header onclick="showAuthor()">
+    <header class="header" onclick="showAuthor()">
         НГТУ, ФБ, Лабораторная работа 5
     </header>
     <main>
         <div class="message" onclick="showSum()">Сколько будет 5154+7891?</div>
-        <div class="message">Узнать, кто автор страницы</div>
+        <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
     </main>
 
-    <footer>
+    <footer class="footer" onclick="showMsg()">
         &copy; Альбинас Гапшис, ФБИ-23, 2 курс, 2024
     </footer>
 </body>
