@@ -9,10 +9,17 @@
 
     <script>
         function blurChange() {
-            let value = document.getElementById('blurValue').value + 'px';
-            document.getElementById('blurOutput').innerText = value;
-            document.getElementById('blurImage').style.filter = 'blur(' + value + ')';
+            let blurValue = document.getElementById('blurValue').value + 'px';
+            document.getElementById('blurOutput').innerText = blurValue;
+            document.getElementById('blurImage').style.filter = 'blur(' + blurValue + ')';
         }
+
+        function brightnessChange() {
+            let brightnessValue = document.getElementById('brightnessValue').value;
+            document.getElementById('brightnessOutput').innerText = brightnessValue + '%';
+            document.getElementById('blurImage').style.filter = 'brightness(' + brightnessValue + '%)';
+        }
+
     </script>
 </head>
 <body>
@@ -29,7 +36,15 @@
             <input type="range" min="0" max="20" value="0" onchange="blurChange()" id="blurValue">
             <span id="blurOutput"></span>
         </div>
+
+        <div>
+            Фильтр brightness:
+            <input type="range" min="0" max="500" value="100" onchange="brightnessChange()" id="brightnessValue">
+            <span id="brightnessOutput"></span>
+        </div>
         <div><img src="https://i.ytimg.com/vi/dNzAOSXUHtI/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&amp;rs=AOn4CLA9kIAHB-k5Ae9-bwjS3IjOzUG9qg" id="blurImage"></div>
+
+
     </main>
 
     <footer>
