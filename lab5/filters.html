@@ -32,6 +32,13 @@
             document.getElementById('blurImage').style.filter = 'grayscale(' + grayscaleValue + '%)';
         }
 
+        function hueRotateChange() {
+            let hueRotateValue = document.getElementById('hueRotateValue').value;
+            document.getElementById('hueRotateOutput').innerText = hueRotateValue + 'deg';
+            document.getElementById('blurImage').style.filter = 'hue-rotate(' + hueRotateValue + 'deg)';
+        }
+
+
 
 
     </script>
@@ -67,6 +74,12 @@
             Фильтр grayscale:
             <input type="range" min="0" max="100" value="0" onchange="grayscaleChange()" id="grayscaleValue">
             <span id="grayscaleOutput"></span>
+        </div>
+
+        <div>
+            Фильтр hue-rotate:
+            <input type="range" min="0" max="360" value="0" onchange="hueRotateChange()" id="hueRotateValue">
+            <span id="hueRotateOutput"></span>
         </div>
 
 
