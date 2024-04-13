@@ -55,6 +55,15 @@
             let msg = 'Приветствую вас на мой странице!';
             alert (msg);
         }
+
+        function changeOutput(buttonNum, backColor, textColor, border) {
+            let output = document.getElementById('output');
+            output.innerHTML = 'Нажата кнопка ' + buttonNum;
+            output.style.backgroundColor = backColor;
+            output.style.color = textColor;
+            output.style.border = border;
+        }
+
     </script>
     <style>
         .message {
@@ -76,6 +85,12 @@
         .footer {
             cursor: pointer;
         }
+
+        #output {
+            border: 1 px solid;
+            width: 300px;
+            height: 40px;
+        }
     </style>
 </head>
 <body>
@@ -90,6 +105,15 @@
         <div class="message" onclick="showDiv()">Найти деление числе</div>
         <div class="message" onclick="showMult()">Найти произведение чисел</div>
         <div class="message" onclick="showAuthor()">Узнать, кто автор страницы</div>
+
+        <div>
+            <input type="button" value="Кнопка 1" onclick="changeOutput(1, 'red', 'yellow', ' 1px solid yellow')">
+            <input type="button" value="Кнопка 2" onclick="changeOutput(2, 'black', 'lime', ' 1px solid lime')">
+            <input type="button" value="Кнопка 3" onclick="changeOutput(3, 'blue', 'red', ' 1px solid red')">
+            <input type="button" value="Кнопка 4" onclick="changeOutput(4, 'pink', 'black', ' 1px solid black')">
+        </div>
+
+        <div id="output"></div>
     </main>
 
     <footer class="footer" onclick="showMsg()">
