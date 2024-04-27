@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Гапшис Альбинас Альбинович. Лабораторная 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        #wear {
+            position: relative;
+            z-index: 1;
+            width: 500px; /* Ширина изображения */
+        }
+    </style>
+</head>
+<body>
+    <header onclick="showAuthor()">
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+
+    <script>
+        function filter() {
+            let color = document.getElementById('wear-color').value;
+            let type = document.getElementById('wear-type').value;
+            let wearImg = document.getElementById('wear');
+
+            if (color == 'Красный' && type == 'Футболка') {
+                wearImg.src = 'red-f.jpg';
+            } 
+            else if (color == 'Красный' && type == 'Поло') {
+                wearImg.src = 'red-p.jpg';
+            } 
+            else if (color == 'Красный' && type == 'Майка') {
+                wearImg.src = 'red-t.jpg';
+            } 
+            else if (color == 'Белый' && type == 'Футболка') {
+                wearImg.src = 'white-f.jpg';
+            } 
+            else if (color == 'Белый' && type == 'Поло') {
+                wearImg.src = 'white-p.jpg';
+            } 
+            else if (color == 'Белый' && type == 'Майка') {
+                wearImg.src = 'white-t.jpg';
+            } 
+            else if (color == 'Чёрный' && type == 'Футболка') {
+                wearImg.src = 'black-f.jpg';
+            } 
+            else if (color == 'Чёрный' && type == 'Поло') {
+                wearImg.src = 'black-p.jpg';
+            } 
+            else if (color == 'Чёрный' && type == 'Майка') {
+                wearImg.src = 'black-t.jpg';
+            } 
+            else {
+                wearImg.src = ''; // Если не выбрано, очистить изображение
+            }
+        }
+    </script>
+
+    <main>
+        <div>
+            Цвет одежды:
+            <select id="wear-color">
+                <option>Красный</option>
+                <option>Белый</option>
+                <option>Чёрный</option>
+            </select><br>
+
+            Тип одежды:
+            <select id="wear-type">
+                <option>Футболка</option>
+                <option>Поло</option>
+                <option>Майка</option>
+            </select><br>
+
+            <button onclick="filter()">ОК</button><br>
+            <img id="wear">
+        </div>
+    </main>
+
+    <footer>
+        &copy; Альбинас Гапшис, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
