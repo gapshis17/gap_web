@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гапшис Альбинас Альбинович. Лабораторная 6</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <style>
+        #color-block {
+            width: 200px;
+            height: 150px;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+    </style>
+</head>
+<body>
+    <header onclick="showAuthor()">
+        НГТУ, ФБ, Лабораторная работа 6
+    </header>
+
+    <main>
+        <div id="color-block" ondblclick="changeColor(this)" style="background-color: yellow; color: black;">
+            Сделайте двойной щелчок, чтобы сменить цвет.<br>
+            <span id="color-name">Текущий цвет: желтый</span>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Альбинас Гапшис, ФБИ-23, 2 курс, 2024
+    </footer>
+
+    <script>
+        let currentColorIndex = 0;
+        const colors = ['yellow', 'red', 'black', 'green', 'blue', 'purple', 'orange', 'brown'];
+        const textColors = ['black', 'white', 'white', 'white', 'white', 'white', 'black', 'white'];
+
+        function changeColor(block) {
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+            block.style.backgroundColor = colors[currentColorIndex];
+            block.style.color = textColors[currentColorIndex];
+            document.getElementById('color-name').textContent = `Текущий цвет: ${colors[currentColorIndex]}`;
+        }
+    </script>
+</body>
+</html>
