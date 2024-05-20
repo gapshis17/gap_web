@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гапшис Альбинас Альбинович. Лабораторная 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <script>
+        function addNewBlock() {
+            let newBlock = document.createElement('div');
+            newBlock.style.backgroundColor = 'green';
+            newBlock.style.height = '40px';
+            newBlock.style.width = '100px';
+            newBlock.style.border = '2px solid black';
+            newBlock.style.margin = '10px';
+
+            document.querySelector('main').appendChild(newBlock);
+        }
+    </script>
+</head>
+<body>
+    <header onclick="showAuthor()">
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button onclick="addNewBlock()">Добавить блок</button>
+    </main>
+
+    <footer>
+        &copy; Альбинас Гапшис, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
