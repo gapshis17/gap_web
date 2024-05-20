@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гапшис Альбинас Альбинович. Лабораторная 7</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+    <script>
+        function showExchange() {
+            const exchange = [
+                94.0742, 94.3242, 94.0922, 93.4409, 93.2519, 93.2918,
+                92.5058, 92.1314, 92.0134, 91.7791
+            ];
+            let table = document.getElementById('dollar-table');
+            let sum = 0;
+            for (let i = 0; i < exchange.length; i++) {
+                let tr = document.createElement('tr');
+                let td = document.createElement('td');
+                td.innerText = exchange[i];
+                tr.appendChild(td);
+                table.appendChild(tr);
+                sum += exchange[i];
+            }
+            let average = sum / exchange.length;
+            average = average.toFixed(2);
+            let detailDiv = document.getElementById('detail');
+            detailDiv.innerText = `Среднее значение: ${average}`;
+        }
+    </script>
+</head>
+<body>
+    <header onclick="showAuthor()">
+        НГТУ, ФБ, Лабораторная работа 7
+    </header>
+
+    <main>
+        <button onclick="showExchange()">Курс доллара</button>
+        <table border="1" id="dollar-table"></table>
+        <div id="detail"></div>
+    </main>
+
+    <footer>
+        &copy; Альбинас Гапшис, ФБИ-23, 2 курс, 2024
+    </footer>
+</body>
+</html>
