@@ -65,6 +65,22 @@
             }
         }
 
+        function addColoredCircles() {
+            let main = document.querySelector('main');
+            let circlesCount = document.getElementById('circlesCount').value;
+            for (let i = circlesCount; i > 0; i--) {
+                let circle = document.createElement('div');
+                circle.classList.add('circle');
+                circle.textContent = i;
+                if (i % 2 === 0) {
+                    
+                    circle.style.backgroundColor = 'green';
+                } else {
+                    circle.style.backgroundColor = 'red';
+                }
+                main.appendChild(circle);
+            }
+        }
     </script>
 </head>
 <body>
@@ -79,6 +95,8 @@
         <button onclick="add20_50()">20=>50</button>
         <button onclick="add10ToMinus80()">10 => -80</button>
         <button onclick="addOpacityBlocks()">Блоки с opacity</button>
+        <input type="number" id="circlesCount" placeholder="Количество кругов">
+        <button onclick="addColoredCircles()">Цветные круги</button>
     </main>
 
     <footer>
