@@ -18,6 +18,19 @@
 
             document.querySelector('main').appendChild(newBlock);
         }
+
+        function addNewBlocks() {
+            let main = document.querySelector('main');
+            let blocksCount = document.getElementById('blocksCount').value;
+            for (let i = 0; i < blocksCount; i++) {
+                let newBlock = document.createElement('div');
+                newBlock.style.backgroundColor = 'green';
+                newBlock.style.height = '40px';
+                newBlock.innerHTML = `Блок № ${i + 1}: 2*${i}<sup>${i ** 2}</sup> = ${2 * i ** 2}`;
+                main.appendChild(newBlock);
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -27,6 +40,7 @@
 
     <main>
         <button onclick="addNewBlock()">Добавить блок</button>
+        <button onclick="addNewBlocks()">Добавить блоки</button>
     </main>
 
     <footer>
