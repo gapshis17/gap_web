@@ -54,6 +54,17 @@
             }
         }
 
+        function addOpacityBlocks() {
+            let main = document.querySelector('main');
+            for (let i = 0; i < 10; i++) {
+                let opacityBlock = document.createElement('div');
+                opacityBlock.classList.add('opacity-block');
+                opacityBlock.style.opacity = (i + 1) * 0.1;
+                opacityBlock.textContent = i + 1;
+                main.appendChild(opacityBlock);
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -67,6 +78,7 @@
         <button onclick="addNewBlocks()">Добавить блоки</button>
         <button onclick="add20_50()">20=>50</button>
         <button onclick="add10ToMinus80()">10 => -80</button>
+        <button onclick="addOpacityBlocks()">Блоки с opacity</button>
     </main>
 
     <footer>
