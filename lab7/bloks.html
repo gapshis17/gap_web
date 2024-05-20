@@ -44,6 +44,16 @@
             }
         }
 
+        function add10ToMinus80() {
+            let main = document.querySelector('main');
+            for (let i = 10; i >= -80; i -= 3) {
+                let circle = document.createElement('div');
+                circle.classList.add('circle');
+                circle.textContent = i;
+                main.appendChild(circle);
+            }
+        }
+
     </script>
 </head>
 <body>
@@ -56,6 +66,7 @@
         <input type="number" id="blocksCount" placeholder="Количество блоков">
         <button onclick="addNewBlocks()">Добавить блоки</button>
         <button onclick="add20_50()">20=>50</button>
+        <button onclick="add10ToMinus80()">10 => -80</button>
     </main>
 
     <footer>
