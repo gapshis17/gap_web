@@ -1,0 +1,91 @@
+.about {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.about h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.about-text {
+    font-size: 24px;
+}
+
+.about-boss {
+    display: flex;
+    gap: 40px;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.about-boss-image {
+    text-align: left;
+}
+
+.about-boss-image img {
+    width: 450px;
+}
+
+.about-boss-text {
+    text-align: justify;
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.about-boss-text a {
+    text-decoration: none;
+    color: #228B22;
+}
+
+.principles {
+    padding-top: 50px;
+}
+
+.principles h2 {
+    text-align: center;
+    font-size: 28px;
+}
+
+.principles-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.principles-item {
+    text-align: justify;
+}
+
+.principles-item-title {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.principles-item-text {
+    font-size: 22px;
+}
+
+.services {
+    padding-top: 50px;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.services-item-title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-style: italic;
+}
+
+.services-item-image img {
+    height: 500px;
+}
+

@@ -1,0 +1,40 @@
+.converter-block {
+    margin: 0 auto;
+    max-width: 800px;
+    height: 800px;
+    background-color: #228B22;
+    padding-top: 30px;
+}
+
+.converter-block h2 {
+    text-align: center;
+    color: white;
+}
+
+.coverter-inputs-to {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.converter-inputs-from {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.converter-input {
+    width: 400px;
+    padding: 30px 15px;
+    background: white;
+    border-radius: 30px;
+    border: 0;
+    color: #228B22;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.converter-input.button {
+    cursor: pointer;
+    width: 380px;
+    background-color: gray;
+    color: white;
+}
