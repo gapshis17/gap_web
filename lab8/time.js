@@ -1,22 +1,26 @@
 function startClock() {
     let timeElement = document.getElementById('time');
     let secondsElement = document.getElementById('seconds');
+    let analogHandElement = document.getElementById('analog-hand');
 
-    if (timeElement && secondsElement) {
-        showTime(timeElement, secondsElement);
+    if (timeElement && secondsElement && analogHandElement) {
+        showTime(timeElement, secondsElement, analogHandElement);
         setInterval(function() {
-            showTime(timeElement, secondsElement);
+            showTime(timeElement, secondsElement, analogHandElement);
         }, 1000);
     } else {
         console.error('Unable to find required elements on the page.');
     }
 }
 
-function showTime(timeElement, secondsElement) {
+function showTime(timeElement, secondsElement, analogHandElement) {
     let today = new Date();
     let currentTime = today.toLocaleTimeString('ru-RU');
-    timeElement.innerHTML = currentTime;
-    secondsElement.innerHTML = today.getSeconds();
+    let seconds = today.getSeconds();
+
+    timeElement.textContent = currentTime;
+    secondsElement.textContent = seconds;
+    analogHandElement.style.transform = `rotate(${seconds * 6}deg)`;
 }
-setInterval(showTime,1000);
+
 startClock();

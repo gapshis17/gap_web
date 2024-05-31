@@ -24,6 +24,36 @@
             text-align: center;
             margin-top: 50px;
         }
+        #analog-clock {
+            width: 200px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: relative;
+            margin: 50px auto;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #analog-clock:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+        #analog-hand {
+            width: 5px;
+            height: 100px;
+            background-color: #333;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform-origin: bottom center;
+            transition: transform 0.5s ease-in-out;
+        }
     </style>
     <script src="time.js" defer></script>
 </head>
@@ -35,6 +65,9 @@
 
     <main>
         <div id="seconds">0</div>
+        <div id="analog-clock">
+            <div id="analog-hand"></div>
+        </div>
     </main>
 
     <footer>
